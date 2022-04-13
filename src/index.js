@@ -25,3 +25,15 @@ window.addEventListener("keydown", (event) => {
         console.log("You pressed the zero key.");
     }
 })
+
+window.addEventListener("wheel", () => {
+    console.log("You may be scrolling too quickly. Please slow down.");
+})
+
+window.addEventListener("load", () => {
+    console.log("It looks like we're ready to go!");
+})
+
+blogButton.addEventListener("focus", () => {
+    blogButton.style.backgroundColor = 'pink';
+})
