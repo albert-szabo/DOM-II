@@ -7,6 +7,7 @@ const homeButton = document.querySelector("#homeButton");
 const aboutUsButton = document.querySelector("#aboutUsButton");
 const blogButton = document.querySelector("#blogButton");
 const contactButton = document.querySelector("#contactButton");
+const topH2 = document.querySelector("#topH2");
 
 title.addEventListener("mouseover", () => {
     title.style.backgroundColor = 'yellow';
@@ -36,4 +37,23 @@ window.addEventListener("load", () => {
 
 blogButton.addEventListener("focus", () => {
     blogButton.style.backgroundColor = 'pink';
+})
+
+window.addEventListener("resize", () => {
+    console.log("You changed the size of the window!");
+})
+
+window.addEventListener("scroll", () => {
+    contactButton.style.backgroundColor = 'skyblue';
+})
+
+topH2.addEventListener("mousemove", () => {
+    topH2.style.backgroundColor = 'greenyellow';
+})
+
+contactButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    const contactButtonClickMessage = document.createElement("h3");
+    contactButtonClickMessage.textContent = "Sorry! You can't click that!";
+    document.body.appendChild(contactButtonClickMessage);
 })
